@@ -1,0 +1,2 @@
+/* Reset for Ratchet with native navbar and scrolling */
+body,.content { position: static; top: auto; right: auto; bottom: auto; left: auto; }
