@@ -20,10 +20,20 @@ $(function() {
     });
 
     $('#things-link').on('singletap', function() {
-    axemas.dialog('Hello!', 'What do you want from me?', ['Annulla', 'Ok'],function(data) {
-        axemas.dialog('Button Pressed', data.button, ['Ok']);
+        axemas.dialog('Hello!', 'What do you want from me?', ['Annulla', 'Ok'],function(data) {
+            axemas.dialog('Button Pressed', data.button, ['Ok']);
+        });
     });
+
+/*
+    APIAccessor.login(email,password,function(response){
+        if(response.code == 0){
+            // do something
+        }else{
+            // generic error
+        }
     });
+*/
 
     axemas.register("ready", function(data, callback) {
         //alert("Page Ready!");

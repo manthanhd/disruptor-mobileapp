@@ -7,14 +7,7 @@
     APIAccessor.BASE_TIMEOUT = 15000;
     APIAccessor.LONG_POLL_TIMEOUT = 40000;
 
-    var emptyStorageModel = {idToken : "",
-                             journey : "",
-                             journeyType : "",
-                             QRCode : "",
-                             latitude : "",
-                             longitude : "",
-                             canRescheduleLongPoll : false,
-                             isLongPollRunning : false};
+    var emptyStorageModel = {loginToken : "" };
 
     APIAccessor.saveApplicationStorage = function(value){
         axemas.storeData("APPLICAION___STORAGE",JSON.stringify(value));
