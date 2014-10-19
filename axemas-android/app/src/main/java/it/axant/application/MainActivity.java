@@ -20,13 +20,11 @@ public class MainActivity extends AXMActivity {
         JSONObject data = new JSONObject();
         try {
             data.put("url", "www/index.html");
-            data.put("toggleSidebarIcon", "slide_icon");
-            data.put("title", "Home");
         } catch (JSONException e) {
             e.printStackTrace();
         }
         NavigationSectionsManager
-                .makeApplicationRootController(this, data, "www/sidebar.html");
+                .makeApplicationRootController(this, data);
 
     }
 

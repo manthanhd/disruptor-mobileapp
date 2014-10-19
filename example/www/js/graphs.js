@@ -1,4 +1,5 @@
 $(function() {
+
         var datum = [{
         'title':'Tomatoes',
         'alert_class_one': 'alert-success',
@@ -29,23 +30,63 @@ $(function() {
         });
 
 
+
+
+    $('#people-link').on('singletap', function() {
+        axemas.goto({'url':'www/people.html', 'stackMaintainedElements': 2});
+    });
+
+    $('#nest-link').on('singletap', function() {
+        axemas.goto({'url':'www/index.html'});
+    });
+
+    $('#native-controller-push-link').on('singletap', function() {
+        axemas.call('openNativeController');
+    });
+
+    $('#guardian-link').on('singletap', function() {
+          axemas.goto({'url':'http://www.theguardian.com'});
+    });
+
+    $('#openmap-link').on('singletap', function() {
+        axemas.call('openMap');
+    });
+
+    $('#things-link').on('singletap', function() {
+        axemas.dialog('Hello!', 'What do you want from me?', ['Annulla', 'Ok'],function(data) {
+            axemas.dialog('Button Pressed', data.button, ['Ok']);
+        });
+    });
+
     $('#daily').on('singletap', function(val) {
-        axemas.goto({"url":"www/graphs.html"});
-        //document.getElementById("daily").getAttribute("value")
+        alert(val);
     });
 
 
     $('#weekly').on('singletap', function(val) {
-        axemas.goto({"url":"www/graphs.html"});
-        //document.getElementById("weekly").getAttribute("value")
+        alert(val);
     });
 
 
     $('#monthly').on('singletap', function(val) {
-        axemas.goto({"url":"www/graphs.html"});
-        //document.getElementById("monthly").getAttribute("value")
+        alert( document.getElementsByTagId("monthly"));
     });
 
+/*
+    APIAccessor.login(email,password,function(response){
+        if(response.code == 0){
+            // do something
+        }else{
+            // generic error
+        }
+    });
+*/
+/*
+    axemas.register("ready", function(data, callback) {
+        //alert("Page Ready!");
+        //callback({data: data});
+    });
+    */
 
 
 

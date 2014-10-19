@@ -26,13 +26,9 @@
     self.networkDetector = [[NetworkAvailabilityDetector alloc] init];
     
     [NavigationSectionsManager registerController:[HomeSectionController class] forRoute:@"www/index.html"];
-    [NavigationSectionsManager registerController:[HomeSectionController class] forRoute:@"www/people.html"];
 
     
-    self.rootController = [NavigationSectionsManager makeApplicationRootController:@[@{@"url":@"www/index.html",
-                                                                                       @"title":@"Home",
-                                                                                       @"toggleSidebarIcon":@"slide_icon"}]
-                                                                       withSidebar:@{@"url":@"www/sidebar.html"}];
+    self.rootController = [NavigationSectionsManager makeApplicationRootController:@[@{@"url":@"www/index.html"}]];
 
     self.window.rootViewController = self.rootController;
     [self.window makeKeyAndVisible];

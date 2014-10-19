@@ -133,6 +133,8 @@ public class SectionFragment extends Fragment {
         webView.setWebViewClient(new SectionWebClient(this.jsbridge, this.controller));
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
+        webView.getSettings().setAllowFileAccessFromFileURLs(true);
+        webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
         webView.getSettings().setDatabaseEnabled(true);
         webView.getSettings().setDatabasePath("/data/data/" + getActivity().getPackageName() + "/databases/");
         webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
